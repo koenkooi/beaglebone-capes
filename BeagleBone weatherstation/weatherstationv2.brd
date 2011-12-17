@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.025" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.025" unitdist="inch" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -65,7 +65,6 @@
 <layer number="105" name="tPlate" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="106" name="bPlate" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="107" name="Crop" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="116" name="Patch_BOT" color="9" fill="4" visible="yes" active="yes"/>
 <layer number="121" name="_tsilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="122" name="_bsilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="125" name="_tNames" color="7" fill="1" visible="yes" active="yes"/>
@@ -93,7 +92,6 @@
 <layer number="219" name="219bmp" color="20" fill="1" visible="no" active="no"/>
 <layer number="220" name="220bmp" color="21" fill="1" visible="no" active="no"/>
 <layer number="221" name="221bmp" color="22" fill="1" visible="no" active="no"/>
-<layer number="222" name="222bmp" color="23" fill="1" visible="no" active="no"/>
 <layer number="223" name="223bmp" color="24" fill="1" visible="no" active="no"/>
 <layer number="224" name="224bmp" color="25" fill="1" visible="no" active="no"/>
 <layer number="250" name="Descript" color="3" fill="1" visible="no" active="no"/>
@@ -126,10 +124,10 @@
 <text x="76.2" y="5.08" size="1.27" layer="21">46</text>
 <text x="76.2" y="50.8" size="1.27" layer="21">46</text>
 <text x="50.8" y="15.875" size="1.016" layer="21">Ambient light sensor</text>
-<text x="63.5" y="27.305" size="1.016" layer="21">Barometric pressure</text>
-<text x="63.5" y="25.4" size="1.016" layer="21">and temperateture sensor</text>
+<text x="63.5" y="26.67" size="1.016" layer="21">Barometric pressure</text>
+<text x="63.5" y="24.765" size="1.016" layer="21">and temperateture sensor</text>
 <text x="55.245" y="41.91" size="1.4224" layer="21" font="vector">BeagleBone Weatherstation</text>
-<text x="34.925" y="24.765" size="1.016" layer="21" font="vector">Humidity sensor</text>
+<text x="35.56" y="22.86" size="1.016" layer="21" font="vector">Humidity sensor</text>
 </plain>
 <libraries>
 <library name="conn23-2f">
@@ -563,15 +561,21 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="P1" library="conn23-2f" package="CONN23-2F" value="CONN23-2F" x="45.085" y="50.165" rot="R90"/>
-<element name="P2" library="conn23-2f" package="CONN23-2F" value="CONN23-2FB" x="45.085" y="4.445" rot="R90"/>
+<element name="P1" library="conn23-2f" package="CONN23-2F" value="CONN23-2F" x="45.085" y="50.165" rot="R90">
+<attribute name="EAGLEUP" value="CONN23-2F;MR90" x="45.085" y="50.165" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="P2" library="conn23-2f" package="CONN23-2F" value="CONN23-2FB" x="45.085" y="4.445" rot="R90">
+<attribute name="EAGLEUP" value="CONN23-2F;MR90" x="45.085" y="4.445" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
 <element name="BAROMETRIC_PRESSURE" library="SparkFun" package="BMP085" value="BMP085" x="76.835" y="20.32" rot="R90"/>
 <element name="C1" library="SparkFun" package="0603-CAP" value="100nF" x="81.28" y="20.32" rot="R270"/>
 <element name="R3" library="SparkFun" package="0603-RES" value="4.7k" x="41.275" y="12.065"/>
 <element name="R4" library="SparkFun" package="0603-RES" value="4.7k" x="41.91" y="9.525"/>
 <element name="AMBIENT_LIGHT" library="SparkFun" package="TEMT6000-SEN" value="TEMT6000" x="57.15" y="13.97" rot="R180"/>
-<element name="R1" library="SparkFun" package="0805" value="10k" x="57.785" y="10.16" rot="R90"/>
-<element name="HUMIDITY" library="ALX" package="SHT21" value="SHT2x" x="41.91" y="19.685" rot="R270"/>
+<element name="R1" library="SparkFun" package="0805" value="10k" x="57.785" y="10.16" rot="R90">
+<attribute name="EAGLEUP" value="R0805" x="57.785" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="SHT21" library="ALX" package="SHT21" value="SHT2x" x="41.91" y="19.685" rot="R270"/>
 <element name="ID_EEPROM" library="microchip" package="SO-08" value="24LC256SN" x="19.05" y="14.605" rot="R270">
 <attribute name="MF" value="MICROCHIP" x="19.05" y="14.605" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="24LC256-I/SN" x="19.05" y="14.605" size="1.778" layer="27" rot="R270" display="off"/>
@@ -589,7 +593,7 @@ design rules under a new name.</description>
 <contactref element="P2" pad="46"/>
 <contactref element="P2" pad="44"/>
 <contactref element="C1" pad="2"/>
-<contactref element="HUMIDITY" pad="2"/>
+<contactref element="SHT21" pad="2"/>
 <contactref element="SW1" pad="3"/>
 <contactref element="SW1" pad="4"/>
 <contactref element="P1" pad="2"/>
@@ -787,7 +791,7 @@ design rules under a new name.</description>
 <contactref element="P2" pad="20"/>
 <contactref element="BAROMETRIC_PRESSURE" pad="7"/>
 <contactref element="R3" pad="1"/>
-<contactref element="HUMIDITY" pad="1"/>
+<contactref element="SHT21" pad="1"/>
 <contactref element="ID_EEPROM" pad="5"/>
 <wire x1="38.1" y1="20.7264" x2="40.2336" y2="20.7264" width="0.2032" layer="1"/>
 <wire x1="38.1" y1="14.3256" x2="38.1" y2="14.6304" width="0.2032" layer="1"/>
@@ -861,7 +865,7 @@ design rules under a new name.</description>
 <contactref element="BAROMETRIC_PRESSURE" pad="3"/>
 <contactref element="C1" pad="1"/>
 <contactref element="BAROMETRIC_PRESSURE" pad="4"/>
-<contactref element="HUMIDITY" pad="5"/>
+<contactref element="SHT21" pad="5"/>
 <contactref element="ID_EEPROM" pad="8"/>
 <wire x1="44.196" y1="19.5072" x2="43.5864" y2="19.5072" width="0.6096" layer="1"/>
 <wire x1="44.196" y1="14.0208" x2="44.196" y2="17.6784" width="0.6096" layer="1"/>
@@ -928,7 +932,7 @@ design rules under a new name.</description>
 <contactref element="P2" pad="19"/>
 <contactref element="BAROMETRIC_PRESSURE" pad="6"/>
 <contactref element="R4" pad="1"/>
-<contactref element="HUMIDITY" pad="6"/>
+<contactref element="SHT21" pad="6"/>
 <contactref element="ID_EEPROM" pad="6"/>
 <wire x1="38.1" y1="13.716" x2="21.9456" y2="13.716" width="0.2032" layer="1"/>
 <wire x1="38.1" y1="7.0104" x2="38.1" y2="13.716" width="0.2032" layer="1"/>

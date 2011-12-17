@@ -2281,7 +2281,7 @@ I2C</description>
 <part name="R4" library="SparkFun" deviceset="RESISTOR" device="0603-RES" value="4.7k"/>
 <part name="AMBIENT_LIGHT" library="SparkFun" deviceset="TEMT6000" device=""/>
 <part name="R1" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="10k"/>
-<part name="HUMIDITY" library="ALX" deviceset="SHT21" device="" value="SHT2x"/>
+<part name="SHT21" library="ALX" deviceset="SHT21" device="" value="SHT2x"/>
 <part name="P+3" library="SparkFun" deviceset="VCC" device=""/>
 <part name="ID_EEPROM" library="microchip" deviceset="24*" device="SN" technology="LC256"/>
 <part name="SW1" library="SparkFun" deviceset="SW_DIP-2" device=""/>
@@ -2311,7 +2311,7 @@ I2C</description>
 <instance part="R4" gate="G$1" x="238.76" y="170.18" rot="R90"/>
 <instance part="AMBIENT_LIGHT" gate="G$1" x="129.54" y="154.94"/>
 <instance part="R1" gate="G$1" x="132.08" y="142.24" rot="R90"/>
-<instance part="HUMIDITY" gate="G$1" x="193.04" y="106.68" rot="MR0"/>
+<instance part="SHT21" gate="G$1" x="193.04" y="106.68" rot="MR0"/>
 <instance part="P+3" gate="1" x="205.74" y="121.92"/>
 <instance part="ID_EEPROM" gate="G$1" x="129.54" y="93.98"/>
 <instance part="SW1" gate="G$1" x="101.6" y="91.44"/>
@@ -2360,7 +2360,7 @@ I2C</description>
 <segment>
 <wire x1="203.2" y1="101.6" x2="205.74" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="205.74" y1="101.6" x2="205.74" y2="96.52" width="0.1524" layer="91"/>
-<pinref part="HUMIDITY" gate="G$1" pin="GND"/>
+<pinref part="SHT21" gate="G$1" pin="GND"/>
 </segment>
 <segment>
 <wire x1="93.98" y1="91.44" x2="91.44" y2="91.44" width="0.1524" layer="91"/>
@@ -2785,7 +2785,7 @@ I2C</description>
 <segment>
 <wire x1="203.2" y1="104.14" x2="223.52" y2="104.14" width="0.1524" layer="91"/>
 <label x="223.52" y="104.14" size="1.778" layer="95"/>
-<pinref part="HUMIDITY" gate="G$1" pin="SDA"/>
+<pinref part="SHT21" gate="G$1" pin="SDA"/>
 </segment>
 <segment>
 <wire x1="144.78" y1="93.98" x2="147.32" y2="93.98" width="0.1524" layer="91"/>
@@ -2915,7 +2915,7 @@ I2C</description>
 <segment>
 <wire x1="203.2" y1="109.22" x2="205.74" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="205.74" y1="121.92" x2="205.74" y2="109.22" width="0.1524" layer="91"/>
-<pinref part="HUMIDITY" gate="G$1" pin="VDD"/>
+<pinref part="SHT21" gate="G$1" pin="VDD"/>
 <pinref part="P+3" gate="1" pin="VCC"/>
 </segment>
 <segment>
@@ -2987,7 +2987,7 @@ I2C</description>
 <segment>
 <wire x1="203.2" y1="106.68" x2="215.9" y2="106.68" width="0.1524" layer="91"/>
 <label x="215.9" y="106.68" size="1.778" layer="95"/>
-<pinref part="HUMIDITY" gate="G$1" pin="SCL"/>
+<pinref part="SHT21" gate="G$1" pin="SCL"/>
 </segment>
 <segment>
 <wire x1="116.84" y1="101.6" x2="114.3" y2="101.6" width="0.1524" layer="91"/>
